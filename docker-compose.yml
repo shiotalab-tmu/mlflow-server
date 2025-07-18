@@ -31,6 +31,8 @@ services:
       retries: 5
     command: server /data --console-address ":9001"
     restart: always
+    volumes:
+      - ./minio-data:/data
   # Create a bucket named "bucket" if it doesn't exist
   minio-create-bucket:
     image: minio/mc
