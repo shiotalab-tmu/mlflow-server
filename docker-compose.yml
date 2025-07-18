@@ -48,7 +48,6 @@ services:
         echo 'bucket already exists'
       fi
       "
-    restart: always
 
   mlflow-server:
     build: .
